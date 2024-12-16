@@ -35,6 +35,24 @@ export class FamilyTree {
     ]);
   }
 
+  public initializeFamily(
+    person1Name: string,
+    person1Gender: Gender,
+    person2Name: string,
+    person2Gender: Gender
+  ): void {
+    try {
+      const person1 = this.createPerson(person1Name, person1Gender);
+      const person2 = this.createPerson(person2Name, person2Gender);
+
+      this.setSpouse(person1, person2);
+
+      console.log("FAMILY_INITIALIZED");
+    } catch (error) {
+      this.handleError(error);
+    }
+  }
+
   public addPerson(name: string, gender: Gender): Person | null {
     try {
       const person = this.createPerson(name, gender);
@@ -43,6 +61,17 @@ export class FamilyTree {
     } catch (error) {
       this.handleError(error);
       return null;
+    }
+  }
+
+  public addSpouse(person1Name: string, person2Name: string): void {
+    try {
+      const person1 = this.getPerson(person1Name);
+      const person2 = this.getPerson(person2Name);
+
+      this.setSpouse(person1, person2);
+    } catch (error) {
+      this.handleError(error);
     }
   }
 
@@ -66,35 +95,6 @@ export class FamilyTree {
     } catch (error) {
       this.handleError(error);
       return null;
-    }
-  }
-
-  public initializeFamily(
-    person1Name: string,
-    person1Gender: Gender,
-    person2Name: string,
-    person2Gender: Gender
-  ): void {
-    try {
-      const person1 = this.createPerson(person1Name, person1Gender);
-      const person2 = this.createPerson(person2Name, person2Gender);
-
-      this.setSpouse(person1, person2);
-
-      console.log("FAMILY_INITIALIZED");
-    } catch (error) {
-      this.handleError(error);
-    }
-  }
-
-  public addSpouse(person1Name: string, person2Name: string): void {
-    try {
-      const person1 = this.getPerson(person1Name);
-      const person2 = this.getPerson(person2Name);
-
-      this.setSpouse(person1, person2);
-    } catch (error) {
-      this.handleError(error);
     }
   }
 
