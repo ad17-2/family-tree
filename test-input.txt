@@ -1,4 +1,3 @@
-# Initialize root families (both maternal and paternal)
 INIT_FAMILY Queen-Margret Female King-Arthur Male
 
 ADD_CHILD Queen-Margret Bill Male
@@ -15,7 +14,7 @@ ADD_PERSON Harry Male
 ADD_SPOUSE Bill Flora
 ADD_SPOUSE Percy Audrey
 ADD_SPOUSE Ronald Helen
-ADD_SPOUSE Harry Ginerva
+ADD_SPOUSE Ginerva Harry
 
 ADD_CHILD Flora Victoire Female
 ADD_CHILD Flora Dominique Female
@@ -46,10 +45,71 @@ ADD_CHILD Darcy William Male
 ADD_CHILD Alice Ron Male
 ADD_CHILD Alice Ginny Female
 
+# Test First Generation Siblings
+GET_RELATIONSHIP Bill Siblings
+GET_RELATIONSHIP Percy Siblings
+GET_RELATIONSHIP Ginerva Siblings
 
-GET_RELATIONSHIP Remus Siblings
+# Test First Generation In-Laws
+GET_RELATIONSHIP Flora Sister-In-Law
+GET_RELATIONSHIP Harry Brother-In-Law
+GET_RELATIONSHIP Audrey Sister-In-Law
+GET_RELATIONSHIP Helen Sister-In-Law
+
+# Test Second Generation Maternal-Aunts
+GET_RELATIONSHIP Victoire Maternal-Aunt
+GET_RELATIONSHIP Molly Maternal-Aunt
+GET_RELATIONSHIP Rose Maternal-Aunt
+GET_RELATIONSHIP James Maternal-Aunt
+
+# Test Second Generation Paternal-Aunts
+GET_RELATIONSHIP Victoire Paternal-Aunt
+GET_RELATIONSHIP Molly Paternal-Aunt
+GET_RELATIONSHIP Rose Paternal-Aunt
+GET_RELATIONSHIP James Paternal-Aunt
+
+# Test Second Generation Maternal-Uncles
+GET_RELATIONSHIP Louis Maternal-Uncle
+GET_RELATIONSHIP Lucy Maternal-Uncle
+GET_RELATIONSHIP Hugo Maternal-Uncle
+GET_RELATIONSHIP Albus Maternal-Uncle
+
+# Test Second Generation Paternal-Uncles
+GET_RELATIONSHIP Victoire Paternal-Uncle
+GET_RELATIONSHIP Molly Paternal-Uncle
+GET_RELATIONSHIP Rose Paternal-Uncle
+GET_RELATIONSHIP Lily Paternal-Uncle
+
+# Test Second Generation Siblings
+GET_RELATIONSHIP Victoire Siblings
+GET_RELATIONSHIP Molly Siblings
+GET_RELATIONSHIP Hugo Siblings
+GET_RELATIONSHIP Albus Siblings
+
+# Test Third Generation Maternal-Aunts
+GET_RELATIONSHIP Remus Maternal-Aunt
+GET_RELATIONSHIP Draco Maternal-Aunt
+GET_RELATIONSHIP William Maternal-Aunt
+GET_RELATIONSHIP Ron Maternal-Aunt
+
+# Test Third Generation Paternal-Aunts
+GET_RELATIONSHIP Remus Paternal-Aunt
+GET_RELATIONSHIP Aster Paternal-Aunt
+GET_RELATIONSHIP Ginny Paternal-Aunt
+
+# Test Third Generation Siblings
 GET_RELATIONSHIP Draco Siblings
-GET_RELATIONSHIP Aster Siblings
 GET_RELATIONSHIP William Siblings
 GET_RELATIONSHIP Ron Siblings
-GET_RELATIONSHIP Ginny Siblings
+
+# Test Parent-Child Relationships
+GET_RELATIONSHIP Flora Son
+GET_RELATIONSHIP Flora Daughter
+GET_RELATIONSHIP Helen Son
+GET_RELATIONSHIP Helen Daughter
+GET_RELATIONSHIP Ginerva Son
+GET_RELATIONSHIP Ginerva Daughter
+GET_RELATIONSHIP Rose Son
+GET_RELATIONSHIP Rose Daughter
+GET_RELATIONSHIP Alice Son
+GET_RELATIONSHIP Alice Daughter
