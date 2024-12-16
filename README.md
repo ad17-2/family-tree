@@ -46,7 +46,6 @@ This will run all the test files with the `.test.ts` extension.
 ## Project Structure
 
 - `src`: Contains the TypeScript source code files.
-- `dist`: Contains the compiled JavaScript files.
 - `package.json`: Defines the project dependencies and scripts.
 - `tsconfig.json`: Specifies the TypeScript compiler options.
 
